@@ -10,6 +10,7 @@ import { CharactersTable } from "@/features/characters/components/CharactersTabl
 import { useSearchParams } from "next/navigation";
 import { SortToggle } from "@/features/characters/components/SortToggle";
 import { Pagination } from "@/features/characters/components/Pagination";
+import { FullScreenState } from "@/features/characters/components/FullScreenState";
 
 export default function CharactersPage() {
  
@@ -24,22 +25,28 @@ const view = searchParams.get("view") ?? "grid";
   });
 
   if (loading) {
-    return <p className={styles.state}>Loading characters…</p>;
+    return (
+      <FullScreenState variant="loading">
+        <div>Loading characters…</div>
+      </FullScreenState>
+    );
   }
-
+  
   if (error) {
-    return <p className={styles.stateError}>{error}</p>;
+    return (
+      <FullScreenState variant="error">
+        {error}
+      </FullScreenState>
+    );
   }
 
   return (
     <main className={styles.container}>
-      <h1>Characters</h1>
-
       <div className={styles.toolbar}>
   <div className={styles.left}>
     <SortToggle />
   </div>
-
+  <h1>Characters</h1>
   <div className={styles.right}>
     <ViewToggle />
   </div>
