@@ -20,8 +20,8 @@ npm -v
 
 
 ## Steps on running the app locally 
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/alpa32/rick-and-morty-explorer.git
+cd rick-and-morty-explorer
 
 ## install dependencies
 npm install
