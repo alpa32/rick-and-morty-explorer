@@ -25,7 +25,7 @@ export function SortToggle() {
           {sort === "asc" ? "↑" : "↓"}
         </span>
         <span>
-          Created: {sort === "asc" ? "Old → New" : "New → Old"}
+          Created: {sort === "asc" ? "Old to New" : "New to Old"}
         </span>
       </button>
     </div>

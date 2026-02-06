@@ -1,5 +1,5 @@
-import { Character } from "../types";
-import styles from "./characters.module.css";
+import { Character } from "../../characters/types";
+import styles from "./Characters.module.css";
 
 interface Props {
   characters: Character[];

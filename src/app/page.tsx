@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./home.module.css";
+import styles from "./homepage.module.css";
 
 export default function HomePage() {
   return (
@@ -25,7 +25,7 @@ export default function HomePage() {
         </div>
 
         <Link href="/characters" className={styles.ctaButton}>
-          Explore Characters →
+          Explore Characters
         </Link>
       </section>
     </main>

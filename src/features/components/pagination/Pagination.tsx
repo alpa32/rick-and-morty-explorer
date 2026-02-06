@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import styles from "./pagination.module.css";
+import styles from "./Pagination.module.css";
 
 interface Props {
   page: number;
