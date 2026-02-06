@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import styles from "./pagination.module.css";
 
 interface Props {
   page: number;
@@ -22,19 +23,21 @@ export function Pagination({ page, totalPages }: Props) {
   }
 
   return (
-    <div>
+    <div className={styles.pagination}>
       <button
+        className={styles.button}
         disabled={page <= 1}
         onClick={() => goToPage(page - 1)}
       >
         Prev
       </button>
 
-      <span>
-        Page {page} of {totalPages}
+      <span className={styles.pageInfo}>
+        Page <strong>{page}</strong> of {totalPages}
       </span>
 
       <button
+        className={styles.button}
         disabled={page >= totalPages}
         onClick={() => goToPage(page + 1)}
       >

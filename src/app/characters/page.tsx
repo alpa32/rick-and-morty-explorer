@@ -51,7 +51,6 @@ const view = searchParams.get("view") ?? "grid";
   <CharactersTable characters={characters} />
 )}
 
-      {/* Temporary pagination */}
       <Pagination page={page} totalPages={totalPages} />
     </main>
   );
