@@ -7,31 +7,43 @@ interface Props {
 
 export function CharactersTable({ characters }: Props) {
   return (
-    <table className={styles.table}>
-      <thead>
-        <tr>
-          <th>Avatar</th>
-          <th>Name</th>
-          <th>Species</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        {characters.map((character) => (
-          <tr key={character.id}>
-            <td>
-              <img
-                src={character.image}
-                alt={character.name}
-                className={styles.tableAvatar}
-              />
-            </td>
-            <td>{character.name}</td>
-            <td>{character.species}</td>
-            <td>{character.status}</td>
+    <div className={styles.wrapper}>
+      <table className={styles.table}>
+        <thead>
+          <tr>
+            <th>Avatar</th>
+            <th>Name</th>
+            <th>Species</th>
+            <th>Status</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {characters.map((character) => (
+            <tr key={character.id}>
+              <td>
+                <img
+                  src={character.image}
+                  alt={character.name}
+                  className={styles.avatar}
+                />
+              </td>
+              <td>{character.name}</td>
+              <td>
+                <span>{character.species}</span>
+              </td>
+              <td>
+                <span
+                  className={`${styles.status} ${
+                    styles[character.status.toLowerCase()]
+                  }`}
+                >
+                  {character.status}
+                </span>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }

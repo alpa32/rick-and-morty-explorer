@@ -4,6 +4,21 @@
   /* padding: 0 0.1rem; */
 }
 
+.wrapper{
+    background: #fff;
+    border-radius: 10px;
+    padding: 0.5rem 0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);  
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.9rem;
+  /* tab-size: fixed; */
+}
+
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -101,4 +116,51 @@
     background: #f0f0f0;
     color: #999;
   }
+
+  .table thead th {
+    background: #fafafa;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .table tbody td {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    /* vertical-align: middle; */
+    /* text-align: left; */
+    color: #333;
+  }
+  
+  .table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .table tbody tr {
+    transition: background 0.15s ease;
+  }
+  
+  .table tbody tr:hover {
+    background: #f9fafb;
+  }
+
+.table th,
+.table td {
+  text-align: left;
+  vertical-align: middle;
+}
+
+
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+  }
+  
   
