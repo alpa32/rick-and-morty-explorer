@@ -16,7 +16,6 @@ export function Pagination({ page, totalPages }: Props) {
   function goToPage(nextPage: number) {
     const params = new URLSearchParams(searchParams.toString());
 
-    console.log("params", params);
     params.set("page", String(nextPage));
 
     router.push(`${pathname}?${params.toString()}`);

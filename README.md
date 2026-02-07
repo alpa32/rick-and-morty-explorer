@@ -33,6 +33,24 @@ npm run dev
 ## The application will be available at
 http://localhost:3000
 
+## Testing
+
+This project uses Jest and React Testing Library (RTL) for unit and integration testing.
+
+What is covered
+
+Component tests
+
+UI rendering with different props and states
+
+Conditional rendering (loading, error, empty states)
+
+User interactions (buttons, toggles)
+
+
+## Steps on running the tests locally 
+After installing dependencies, run:
+npm run test
 
 ## Tech Stack
 

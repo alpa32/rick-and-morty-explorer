@@ -1,9 +1,6 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import '@testing-library/jest-dom';
 import HomePage from "@/app/page";
-// import { RouterContext } from "next/dist/shared/lib/router-context";
-// import { createMockRouter } from "../../__mocks__/createMockRouter";
+import '@testing-library/jest-dom';
+import { render, screen } from "@testing-library/react";
 
 describe("HomePage", () => {
   it("renders the hero section with title and subtitle", () => {
